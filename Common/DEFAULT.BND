@@ -245,7 +245,9 @@ edit bind r+ctrl+shift rooms_build                  ; build the rooms database
 ;edit bind s+ctrl+shift synch_all                    ; synchronize the camera in 2d views
 edit bind s+ctrl+shift save_gamesys                 ; save the gamesys
 edit bind u+ctrl+shift redo                         ; move forward in history
-edit bind w+ctrl+shift "cycle_group 1"              ; next stored group (buggy)
+edit bind v+ctrl+shift "qlink_create Contains"      ; create Contains link
+;edit bind w+ctrl+shift "cycle_group 1"              ; next stored group (buggy)
+edit bind w+ctrl+shift "qlink_create AIWatchObj"    ; create AIWatchObj link
 edit bind tab+ctrl+shift "cycle_context -1"         ; cycle to previous brush, or brush in group
 edit bind F12+ctrl+shift "set_room_type 15"         ; set room eax type outside
 
