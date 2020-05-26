@@ -36,6 +36,7 @@ game bind p "unfly"                                 ; stop flying, fall
 edit bind q "cam_rotate 2"                          ; turn left
 edit bind r "cam_slew 2"                            ; down
 edit bind s "cam_slew 3"                            ; backward
+edit bind t "run .\cmds\SetTexture.cmd"             ; Set a texture.
 ;edit bind t "cycle_tex 1"                           ; cycle texture forward
 ;game bind u "unstick_player"                       ; unsticks the player, Newdark Only
 ;edit bind v "cam_rotate 1"                          ; look down
