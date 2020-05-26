@@ -36,7 +36,6 @@ game bind p "unfly"                                 ; stop flying, fall
 edit bind q "cam_rotate 2"                          ; turn left
 edit bind r "cam_slew 2"                            ; down
 edit bind s "cam_slew 3"                            ; backward
-edit bind t "run .\cmds\SetTexture.cmd"             ; Set a texture.
 ;edit bind t "cycle_tex 1"                           ; cycle texture forward
 ;game bind u "unstick_player"                       ; unsticks the player, Newdark Only
 ;edit bind v "cam_rotate 1"                          ; look down
@@ -101,6 +100,7 @@ all  bind o+shift "toggle_object_render"            ; toggle rendering of object
 edit bind q+shift qlink_del                         ; remove from quicklink group
 game bind q+shift "+fly  1"                         ; fly up
 ;edit bind s+shift "set_grid"                        ; snap brush vertices to grid
+edit bind t+shift "run .\cmds\SetTexture.cmd"       ; Set default texture.
 ;edit bind t+shift "cycle_tex -1"                    ; cycle texture backward
 edit bind u+shift "go_to_meonly"                    ; select meonly area brush
 edit bind w+shift "align_object"                    ; align selected object to surface relative to cam
