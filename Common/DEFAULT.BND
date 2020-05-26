@@ -236,6 +236,10 @@ all  bind x+alt+shift "quit_game"                   ; quit
 
 edit bind c+ctrl+shift "qlink_create ControlDevice" ; create ControlDevice link chain
 edit bind f+ctrl+shift ceil_object                  ; 'drop' selected object to ceiling
+edit bind h+ctrl+shift "set_medium 8"               ; make brush water->solid
+edit bind j+ctrl+shift "set_medium 4"               ; make brush evaporate (water->air)
+edit bind k+ctrl+shift "set_medium 5"               ; make brush solid->water
+edit bind l+ctrl+shift "set_medium 7"               ; make brush air->solid
 edit bind l+ctrl+shift edit_links                   ; open links dialog for selected object
 ;all  bind o+ctrl+shift "light_bright"              ; OldDark Only
 all  bind o+ctrl+shift "toggle_lighting"            ; Newdark Only
