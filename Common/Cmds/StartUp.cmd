@@ -30,3 +30,8 @@ toggle_book_autoreload
 
 ; start with grid scale 13
 grid_abs_scale 0.5
+
+; initial quick texture indices (see SetTexture.cmd)
+;set tx 0
+;set tx2 -1
+;set tx3 -1
