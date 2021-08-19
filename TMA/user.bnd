@@ -52,7 +52,8 @@ bind f+ctrl ai_forget_player
 bind f1 "inv_select healingpotion"
 bind f1+alt mono_debug
 bind f10 screen_dump
-bind f11 "inv_select cameragrenade"
+;bind f11 "inv_select cameragrenade"
+bind f11 "run .\cmds\ReportBug.cmd"
 bind f12 "inv_select compass2"
 bind f2 "inv_select airpotion"
 bind f3 "inv_select invisipotion"
