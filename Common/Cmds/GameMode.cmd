@@ -1,2 +1,2 @@
-reload_scripts
+script_reload
 game_mode
