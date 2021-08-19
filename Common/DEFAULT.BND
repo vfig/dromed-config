@@ -153,7 +153,7 @@ game bind e+alt "run .\cmds\EditMode.cmd"           ; return to edit mode
 edit bind h+alt hilight_clear                       ; clear highlight
 edit bind l+alt "load_file"                         ; load file
 edit bind o+alt "edit_obj"                          ; open object editor
-all  bind g+alt "game_mode"                         ; enter game mode
+all  bind g+alt "run .\cmds\GameMode.cmd"           ; enter game mode
 edit bind p+alt "run .\cmds\Portalize.cmd"          ; portalize the level to view solid 3d
 edit bind q+alt "gfh_coord_edit 0"
 ;edit bind r+alt "reset_brush"                       ; reset selected brush's rotation
