@@ -58,6 +58,7 @@ edit bind 7 "prim_cylinder @@3"                     ; cylinder (prompt for sides
 edit bind 9 "prim_facealign 0"                      ; align by vertices
 edit bind 0 "prim_facealign 1"                      ; align by sides
 edit bind / "cycle_face 100"                        ; deviously selects the default face
+edit bind ? "run .\cmds\GridReset.cmd"              ; reset to grid 13
 all  bind : "edit_command"                          ; open console
 edit bind + "zoom_all 0.5"                          ; zoom in
 edit bind , "cycle_face -1"                         ; reverse through above
