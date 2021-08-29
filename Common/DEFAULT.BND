@@ -38,25 +38,31 @@ edit bind q "cam_rotate 2"                          ; turn left
 edit bind r "cam_slew 2"                            ; down
 edit bind s "cam_slew 3"                            ; backward
 ;edit bind t "cycle_tex 1"                           ; cycle texture forward
-edit bind t "run .\cmds\SetTexture.cmd"             ; Set specific texture.
+edit bind t "run .\cmds\SetTexture.cmd"             ; Set brush textures.
 ;game bind u "unstick_player"                       ; unsticks the player, Newdark Only
 ;edit bind v "cam_rotate 1"                          ; look down
 edit bind w "cam_slew 0"                            ; forward
 ;edit bind x "cam_level"                             ; reset camera pitch, olddark
 edit bind x "cam_reset"                             ; reset camera pitch and slew,, newdark only
 edit bind z "cam_rotate 4"                          ; look up
+edit bind ` set_brush_tx 0                          ; Set face texture to jorge.
 ;edit bind 1 "cam_rotate 3"                          ; roll camera clockwise
 ;edit bind 2 "cam_unroll"                            ; reset camera roll
 ;edit bind 3 "cam_rotate 0"                          ; roll camera counter-clockwise
-edit bind 1 "prim_type 0"                           ; cube
-edit bind 2 "prim_special 10"                       ; wedge
-edit bind 3 "prim_cylinder 6"                       ; cylinder (6 sided)
-edit bind 4 "prim_cylinder 8"                       ; cylinder (8 sided)
-edit bind 5 "prim_cylinder 10"                      ; cylinder (10 sided)
-edit bind 6 "prim_cylinder 12"                      ; cylinder (12 sided)
-edit bind 7 "prim_cylinder @@3"                     ; cylinder (prompt for sides)
-edit bind 9 "prim_facealign 0"                      ; align by vertices
-edit bind 0 "prim_facealign 1"                      ; align by sides
+edit bind 1 "run .\cmds\SetFaceTexture1.cmd"         ; Set face texture to tx.
+edit bind 2 "run .\cmds\SetFaceTexture2.cmd"         ; Set face texture to tx2.
+edit bind 3 "run .\cmds\SetFaceTexture3.cmd"         ; Set face texture to tx3.
+edit bind 4 "run .\cmds\SetFaceTexture4.cmd"         ; Set face texture to tx4.
+edit bind 5 "run .\cmds\SetFaceTexture5.cmd"         ; Set face texture to tx5.
+;edit bind 1 "prim_type 0"                           ; cube
+;edit bind 2 "prim_special 10"                       ; wedge
+;edit bind 3 "prim_cylinder 6"                       ; cylinder (6 sided)
+;edit bind 4 "prim_cylinder 8"                       ; cylinder (8 sided)
+;edit bind 5 "prim_cylinder 10"                      ; cylinder (10 sided)
+;edit bind 6 "prim_cylinder 12"                      ; cylinder (12 sided)
+;edit bind 7 "prim_cylinder @@3"                     ; cylinder (prompt for sides)
+;edit bind 9 "prim_facealign 0"                      ; align by vertices
+;edit bind 0 "prim_facealign 1"                      ; align by sides
 edit bind / "cycle_face 100"                        ; deviously selects the default face
 edit bind ? "run .\cmds\GridReset.cmd"              ; reset to grid 13
 all  bind : "edit_command"                          ; open console
@@ -90,7 +96,7 @@ edit bind keypad_pgup "run .\cmds\TransNE.cmd"      ; move brush NE
 edit bind keypad_pgdn "run .\cmds\TransSE.cmd"      ; move brush SE
 edit bind F1 "help @@help"                          ; print all commands
 edit bind F2 "cycle_mode"                           ; cycle through rendering modes for 3d view
-edit bind F3 "find_obj @@"                          ; look up object by name or number 
+edit bind F3 "find_obj @@"                          ; look up object by name or number
 edit bind F5 "obj_tree"                             ; open the object hierarchy editor
 edit bind F6 "edit_obj"                             ; edit selected object
 edit bind F7 "texture_pal"                          ; open texture palette
@@ -173,7 +179,7 @@ all  bind 9+alt "show_mip"                          ; show polys in light gray
 all  bind 0+alt "show_poly"                         ; show polys in black
 all  bind ?+alt "render_info 30"                    ; more info about current rendered scene
 edit bind ++alt "grid_scale 0.5"                    ; decrease grid scale
-edit bind -+alt "grid_scale 2.0"                    ; increase grid scale 
+edit bind -+alt "grid_scale 2.0"                    ; increase grid scale
 all  bind /+alt "render_info 10"                    ; info about current rendered scene
 edit bind =+alt "grid_scale 0.5"                    ; decrease grid scale
 edit bind _+alt "grid_scale 2.0"                    ; increase grid scale
@@ -226,7 +232,7 @@ edit bind keypad_up+ctrl    "brush_stretch 0"
 edit bind tab+ctrl "cycle_context 1"                ; cycle to next brush, or brush in group
 edit bind F1+ctrl "set_room_type 1"                 ; set room eax type small dead
 edit bind F2+ctrl "set_room_type 2"                 ; set room eax type small normal
-edit bind F3+ctrl "set_room_type 20"                ; set room eax type small live 
+edit bind F3+ctrl "set_room_type 20"                ; set room eax type small live
 edit bind F4+ctrl "set_room_type 19"                ; set room eax type large dead
 edit bind F5+ctrl "set_room_type 5"                 ; set room eax type large normal
 edit bind F6+ctrl "set_room_type 8"                 ; set room eax type large live
