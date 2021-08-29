@@ -45,7 +45,7 @@ edit bind w "cam_slew 0"                            ; forward
 ;edit bind x "cam_level"                             ; reset camera pitch, olddark
 edit bind x "cam_reset"                             ; reset camera pitch and slew,, newdark only
 edit bind z "cam_rotate 4"                          ; look up
-edit bind ` set_brush_tx 0                          ; Set face texture to jorge.
+edit bind ` "set_brush_tx -1"                        ; Set face texture to default.
 ;edit bind 1 "cam_rotate 3"                          ; roll camera clockwise
 ;edit bind 2 "cam_unroll"                            ; reset camera roll
 ;edit bind 3 "cam_rotate 0"                          ; roll camera counter-clockwise
@@ -54,6 +54,8 @@ edit bind 2 "run .\cmds\SetFaceTexture2.cmd"         ; Set face texture to tx2.
 edit bind 3 "run .\cmds\SetFaceTexture3.cmd"         ; Set face texture to tx3.
 edit bind 4 "run .\cmds\SetFaceTexture4.cmd"         ; Set face texture to tx4.
 edit bind 5 "run .\cmds\SetFaceTexture5.cmd"         ; Set face texture to tx5.
+edit bind 9 "set_brush_tx 249"                       ; Set face texture to sky.
+edit bind 0 "set_brush_tx 0"                         ; Set face texture to jorge.
 ;edit bind 1 "prim_type 0"                           ; cube
 ;edit bind 2 "prim_special 10"                       ; wedge
 ;edit bind 3 "prim_cylinder 6"                       ; cylinder (6 sided)
