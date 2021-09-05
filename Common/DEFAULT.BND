@@ -44,6 +44,7 @@ edit bind t "run .\cmds\SetTexture.cmd"             ; Set brush textures.
 edit bind w "cam_slew 0"                            ; forward
 ;edit bind x "cam_level"                             ; reset camera pitch, olddark
 edit bind x "cam_reset"                             ; reset camera pitch and slew,, newdark only
+;edit bind y "run .\cmds\RetimeBrush.cmd"            ; prompt to retime the selected brush (enable when needed)
 edit bind z "cam_rotate 4"                          ; look up
 edit bind ` "set_brush_tx -1"                        ; Set face texture to default.
 ;edit bind 1 "cam_rotate 3"                          ; roll camera clockwise
