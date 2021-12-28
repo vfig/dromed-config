@@ -1,3 +1,2 @@
 relight_level
-;play_schema dinner_bell
 play_schema bow_begin

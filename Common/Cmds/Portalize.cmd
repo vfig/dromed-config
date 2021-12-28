@@ -1,0 +1,5 @@
+compress_br_ids
+clear_surface_cache
+optimize_bsp 0
+portalize
+play_schema bow_begin
