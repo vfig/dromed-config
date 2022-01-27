@@ -318,6 +318,12 @@ game bind 7+ctrl+alt "scale_player_speed 2.5"
 game bind 8+ctrl+alt "scale_player_speed 2.75"
 game bind 9+ctrl+alt "scale_player_speed 3"
 game bind 0+ctrl+alt "scale_player_speed 3.25"
+edit bind keypad_plus+ctrl+alt  "run .\cmds\RotateZ4.cmd"      ; rotate 4x on Z axis
+edit bind keypad_minus+ctrl+alt "run .\cmds\RotateZMinus4.cmd" ; rotate 4x on -Z axis
+edit bind keypad_down+ctrl+alt  "run .\cmds\RotateX4.cmd"      ; rotate 4x on X axis
+edit bind keypad_left+ctrl+alt  "run .\cmds\RotateYMinus4.cmd" ; rotate 4x on -Y axis
+edit bind keypad_right+ctrl+alt "run .\cmds\RotateY4.cmd"      ; rotate 4x on Y axis
+edit bind keypad_up+ctrl+alt    "run .\cmds\RotateXMinus4.cmd" ; rotate 4x on -X axis
 
 
 ;      ALT-CTRL-SHIFT
