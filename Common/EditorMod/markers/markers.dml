@@ -1,0 +1,119 @@
+DML1
+
+// TODO:
+// - other markers (ambientSound, TerrPt, etc)
+// - hacklights
+// - model for spotlight (since it points -Z, it cant be a bitmap)
+// - 1 unit diameter cube model for boundstriggers
+// - bitmaps for conversation
+// - get feedback on it from other authors
+
+// ICON SCALING
+//
+// For objects with the Renderer>Bitmap Worldspace property, its size
+// fields take precedence, so Shape>Scale is irrelevant. But for all
+// other objects, the scale needs to be set accordingly:
+//
+// Bitmap width (pixels)	World size (feet)	Shape>Scale (all axes)
+//		 16						2.0					2.0
+//		 16						1.0					1.0
+//		 16						0.5					0.5
+//		 16						0.25				0.25
+//		 32						2.0					1.0
+//		 32						1.0					0.5
+//		 32						0.5					0.25
+//		 32						0.25				0.125
+//		 64						2.0					0.5
+//		 64						1.0					0.25
+//		 64						0.5					0.125
+//		 64						0.25				0.0625
+//		128						2.0					0.25
+//		128						1.0					0.125
+//		128						0.5					0.0625
+//		128						0.25				0.03125
+
+//-----------------------------------------
+// fnord
+//
++ObjProp "fnord" "RenderType" = "Editor Only"
+
+// StartingPointArch (new)
+CreateArch "Marker" "StartingPointArch"
++ObjProp "StartingPointArch" "ModelName" = "devstartpt"
++ObjProp "StartingPointArch" "BitmapWorld"
+{
+	"x size (feet)" 1.00
+	"y size (feet)" 1.00
+	"x feet per tile" 1.00
+	"y feet per tile" 1.00
+	"Flags" "Double sided"
+	"Axial Fade" 0.00
+}
+
+// ----------------------------------------
+// Marker and descendants
+//
+
+// TrolPt
++ObjProp "TrolPt" "ModelName" = "devtrolpt"
++ObjProp "TrolPt" "Scale" = 0.125, 0.125, 0.125
+
+// ----------------------------------------
+// TrapTrig and descendants
+//
++ObjProp "TrapTrig" "ModelName" = "devtrap"
++ObjProp "TrapTrig" "Scale" = 0.0625, 0.0625, 0.0625
+
+// Most TrapTrigs are just icons:
++ObjProp "Capacitor" "ModelName" = "devcapac"
++ObjProp "CreateTrap" "ModelName" = "devcreate"
++ObjProp "DeadfallTrap" "ModelName" = "devdeadfal"
++ObjProp "DestroyTrap" "ModelName" = "devdestroy"
++ObjProp "FindSecretTrap" "ModelName" = "devsecret"
++ObjProp "FlickerTrigger" "ModelName" = "devflicker"
++ObjProp "FnordLock" "ModelName" = "devlock"
++ObjProp "Inverter" "ModelName" = "devinvert"
++ObjProp "PatrolTrap" "ModelName" = "devpatrol"
++ObjProp "QuestVarTrap" "ModelName" = "devqvar"
++ObjProp "QuestVarTrigger" "ModelName" = "devqvtrig"
++ObjProp "RelayTrap" "ModelName" = "devrelay"
++ObjProp "ReleaseTrap" "ModelName" = "devrelease"
++ObjProp "RequireAllTrap" "ModelName" = "devreqall"
++ObjProp "RequireAnyTrap" "ModelName" = "devreqany"
++ObjProp "RevertTrap" "ModelName" = "devrevert"
++ObjProp "SoundTrap" "ModelName" = "devsound"
++ObjProp "VOTrap" "ModelName" = "devvo"
+
+// TrapTrigs that care about orientation use Bitmap Worldspace:
++ObjProp "EmitStreamTrap" "ModelName" = "devemit"
++ObjProp "EmitStreamTrap" "BitmapWorld"
+{
+	"x size (feet)" 0.5
+	"y size (feet)" 0.125
+	"x feet per tile" 0.5
+	"y feet per tile" 0.125
+	"Flags" "Double sided"
+	"Axial Fade" 0.00
+}
+
++ObjProp "EmitterTrap" "ModelName" = "devemit"
++ObjProp "EmitterTrap" "BitmapWorld"
+{
+	"x size (feet)" 0.5
+	"y size (feet)" 0.125
+	"x feet per tile" 0.5
+	"y feet per tile" 0.125
+	"Flags" "Double sided"
+	"Axial Fade" 0.00
+}
+
++ObjProp "TeleportTrap" "ModelName" = "devtelept"
++ObjProp "TeleportTrap" "BitmapWorld"
+{
+	"x size (feet)" 0.5
+	"y size (feet)" 0.125
+	"x feet per tile" 0.5
+	"y feet per tile" 0.125
+	"Flags" "Double sided"
+	"Axial Fade" 0.00
+}

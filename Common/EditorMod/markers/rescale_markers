@@ -1,0 +1,5 @@
+hilight_clear
+hilight_obj_type fnord
+hilight_rem_prop Scale
+hilight_add_prop Scale
+hilight_clear
