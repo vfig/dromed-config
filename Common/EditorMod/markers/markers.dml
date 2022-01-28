@@ -50,13 +50,35 @@ CreateArch "Marker" "StartingPointArch"
 	"Axial Fade" 0.00
 }
 
++ObjProp "ambientSound" "ModelName" = "devambient"
++ObjProp "ambientSound" "Scale" = 0.5, 0.5, 0.5
+
++ObjProp "FnordSpeaker" "ModelName" = "devambient"
++ObjProp "FnordSpeaker" "Scale" = 0.5, 0.5, 0.5
+
++ObjProp "musicTheme" "ModelName" = "devambient"
++ObjProp "musicTheme" "Scale" = 0.5, 0.5, 0.5
+
+
 // ----------------------------------------
 // Marker and descendants
 //
 
-// TrolPt
 +ObjProp "TrolPt" "ModelName" = "devtrolpt"
 +ObjProp "TrolPt" "Scale" = 0.125, 0.125, 0.125
+
++ObjProp "HackLight" "ModelName" = "devlight"
++ObjProp "HackLight" "Scale" = 0.5, 0.5, 0.5
+
++ObjProp "AnimLightPoint" "ModelName" = "devanimlit"
++ObjProp "AnimLightPoint" "Scale" = 0.5, 0.5, 0.5
+
++ObjProp "OmniLightPoint" "ModelName" = "devlight"
++ObjProp "OmniLightPoint" "Scale" = 0.5, 0.5, 0.5
+
++ObjProp "SpotLightPoint" "ModelName" = "devspotlit"
++ObjProp "SpotLightPoint" "Scale" = 1.0, 1.0, 1.0
++ObjProp "SpotLightPoint" "RenderType" = "Unlit"
 
 // ----------------------------------------
 // TrapTrig and descendants
@@ -83,6 +105,10 @@ CreateArch "Marker" "StartingPointArch"
 +ObjProp "RevertTrap" "ModelName" = "devrevert"
 +ObjProp "SoundTrap" "ModelName" = "devsound"
 +ObjProp "VOTrap" "ModelName" = "devvo"
+
++ObjProp "BoundsTrigger" "ModelName" = "devbounds"
++ObjProp "BoundsTrigger" "Scale" = 8.0, 8.0, 8.0
++ObjProp "BoundsTrigger" "RenderType" = "Unlit"
 
 // TrapTrigs that care about orientation use Bitmap Worldspace:
 +ObjProp "EmitStreamTrap" "ModelName" = "devemit"
