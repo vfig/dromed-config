@@ -138,7 +138,8 @@ edit bind $ "prim_pyramid 8"                        ; pyramid (8 sided)
 edit bind % "prim_pyramid 10"                       ; pyramid (10 sided)
 edit bind ^ "prim_pyramid 12"                       ; pyramid (12 sided)
 edit bind & "prim_pyramid @@3"                      ; pyramid (prompt for sides)
-edit bind home+shift "brush_to_room -0.125"         ; clones brush as a room brush, 0.125 ft bigger on each edge
+;edit bind home+shift "brush_to_room -0.125"         ; clones brush as a room brush, 0.125 ft bigger on each edge
+edit bind home+shift "brush_to_room 0"              ; clones brush as a room brush, exact same size
 edit bind ins+shift "insert_brush"                  ; clone current brush
 edit bind end+shift "vBrush_EOT"                    ; make this brush last in time
 edit bind tab+shift "cycle_brush -1"                ; select previous brush
