@@ -226,11 +226,13 @@ edit bind u+ctrl undo                               ; move back in history
 ;edit bind w+ctrl "cycle_group 0"                    ; select last stored group (buggy)
 ;edit bind x+ctrl xmouse                             ; toggle auto-camera selection
 edit bind z+ctrl undo                               ; windows compatible, eh?
-edit bind 1+ctrl "brush_filter 240"                 ; show terrain, lights, objects, and areas
+edit bind 1+ctrl "brush_filter 176"                 ; show terrain, lights, objects
 edit bind 2+ctrl "brush_filter 16"                  ; show terrain only
 edit bind 3+ctrl "brush_filter 160"                 ; show lights and objects only
-edit bind 4+ctrl "brush_filter 512"                 ; show rooms only
-edit bind 5+ctrl "brush_filter 1008"                ; show everything
+edit bind 4+ctrl "brush_filter 64"                 ; show areas only
+edit bind 5+ctrl "brush_filter 512"                 ; show rooms only
+edit bind 6+ctrl "brush_filter 528"                 ; show terrain and rooms only
+edit bind 7+ctrl "brush_filter 1008"                ; show everything
 ;edit bind 7+ctrl "brush_color 1"                    ; brush colors static
 ;edit bind 8+ctrl "brush_color 2"                    ; brush colors change based on ?
 ;edit bind 9+ctrl "brush_color 3"                    ; brush colors change based on ?
