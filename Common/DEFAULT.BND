@@ -41,6 +41,7 @@ edit bind s "cam_slew 3"                            ; backward
 edit bind t "run .\cmds\SetTexture.cmd"             ; Set brush textures.
 ;game bind u "unstick_player"                       ; unsticks the player, Newdark Only
 ;edit bind v "cam_rotate 1"                          ; look down
+edit bind v "run .\cmds\FilterNext.cmd"             ; next brush type filter
 edit bind w "cam_slew 0"                            ; forward
 ;edit bind x "cam_level"                             ; reset camera pitch, olddark
 edit bind x "cam_reset"                             ; reset camera pitch and slew,, newdark only
@@ -127,6 +128,7 @@ game bind q+shift "+fly  1"                         ; fly up
 edit bind t+shift "run .\cmds\ResetTexture.cmd"       ; Set default texture.
 ;edit bind t+shift "cycle_tex -1"                    ; cycle texture backward
 edit bind u+shift "go_to_meonly"                    ; select meonly area brush
+edit bind v+shift "run .\cmds\FilterPrev.cmd"       ; previous brush type filter
 edit bind w+shift "align_object"                    ; align selected object to surface relative to cam
 ;edit bind w+shift "wall_object"                    ; move selected object to wall
 edit bind y+shift "run .\cmds\RetimeBrush.cmd"      ; prompt to retime the selected brush, texture it, and reportalize
@@ -223,6 +225,7 @@ edit bind s+ctrl save_mission                       ; save the mission
 edit bind q+ctrl qlink_add                          ; add to quicklink group
 edit bind r+ctrl "Run .\cmds\DoLight.cmd"           ; relight the level
 edit bind u+ctrl undo                               ; move back in history
+edit bind v+ctrl "run .\cmds\FilterNone.cmd"        ; reset brush type filter
 ;edit bind w+ctrl "cycle_group 0"                    ; select last stored group (buggy)
 ;edit bind x+ctrl xmouse                             ; toggle auto-camera selection
 edit bind z+ctrl undo                               ; windows compatible, eh?
