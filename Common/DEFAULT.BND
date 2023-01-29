@@ -23,7 +23,7 @@ edit bind a "cam_slew 1"                            ; sidestep left
 edit bind c "cam_rotate 1"                          ; look down
 edit bind d "cam_slew 4"                            ; sidestep right
 edit bind e "cam_rotate 5"                          ; turn right
-edit bind f "cam_slew 5"                            ; up
+edit bind f "cam_slew 5"                            ; down
 ;edit bind h "set_medium 0"                          ; make brush solid
 edit bind h hilight_brush                           ; toggle highlight of selected brush
 game bind i "report_bug"                            ; report a bug, duh
@@ -35,7 +35,7 @@ edit bind n "set_2d_tex_filter -1"                  ; toggle texture filtering (
 edit bind o "solo_toggle"                           ; toggle this window to/from full screen
 game bind p "unfly"                                 ; stop flying, fall
 edit bind q "cam_rotate 2"                          ; turn left
-edit bind r "cam_slew 2"                            ; down
+edit bind r "cam_slew 2"                            ; up
 edit bind s "cam_slew 3"                            ; backward
 ;edit bind t "cycle_tex 1"                           ; cycle texture forward
 edit bind t "run .\cmds\SetTexture.cmd"             ; Set brush textures.
@@ -91,8 +91,8 @@ edit bind del "delete_brush"                        ; delete selected brush
 ;edit bind ins "insert_brush"                        ; clone current brush
 all  bind home "vm_teleport 0,0,0"                  ; return camera to default position
 all  bind print_screen "screen_dump"                ; save screenshot
-edit bind keypad_plus "brush_translate 5"           ; move brush up
-edit bind keypad_minus "brush_translate 2"          ; move brush down
+edit bind keypad_plus "brush_translate 5"           ; move brush down
+edit bind keypad_minus "brush_translate 2"          ; move brush up
 edit bind keypad_down "brush_translate 0"           ; move brush south
 edit bind keypad_left "brush_translate 4"           ; move brush west
 edit bind keypad_right "brush_translate 1"          ; move brush east
@@ -101,8 +101,10 @@ edit bind keypad_home "run .\cmds\TransNW.cmd"      ; move brush NW
 edit bind keypad_end "run .\cmds\TransSW.cmd"       ; move brush SW
 edit bind keypad_pgup "run .\cmds\TransNE.cmd"      ; move brush NE
 edit bind keypad_pgdn "run .\cmds\TransSE.cmd"      ; move brush SE
-edit bind F1 "help @@help"                          ; print all commands
-edit bind F2 "cycle_mode"                           ; cycle through rendering modes for 3d view
+;edit bind F1 "help @@help"                          ; print all commands
+edit bind F1 "run .\cmds\View1.cmd"
+;edit bind F2 "cycle_mode"                           ; cycle through rendering modes for 3d view
+edit bind F2 "run .\cmds\View2.cmd"
 edit bind F3 "find_obj @@"                          ; look up object by name or number
 edit bind F5 "obj_tree"                             ; open the object hierarchy editor
 edit bind F6 "edit_obj"                             ; edit selected object
@@ -112,9 +114,11 @@ edit bind F9 "play_schema @@"                       ; play schema
 edit bind F10 "halt_schemas"                        ; halt all schemas
 ;edit bind F11 "save_mission"                        ; save mission
 ;edit bind F12 "load_file"                           ; load mission
-
+edit bind pgup "run .\cmds\CamUp512.cmd"            ; move cam up 512 units (at grid 14)
+edit bind pgdn "run .\cmds\CamDown512.cmd"          ; move cam down 512 units (at grid 14)
 
 ;      SHIFT-
+
 edit bind c+shift "ceil_object"                     ; 'drop' selected object to ceiling
 edit bind d+shift "store_group"                     ; store multibrush group
 game bind e+shift "+fly -1"                         ; fly down
@@ -159,6 +163,8 @@ edit bind F5+shift "brush_filter 3328"              ; filter flow
 edit bind F6+shift "brush_filter 3584"              ; filter room
 edit bind F7+shift "brush_filter 4080"              ; filter none
 edit bind F8+shift "brush_to_cam 2"                 ; move selected brush to camera with decimals preserved
+edit bind pgup+shift "run .\cmds\NudgeUp512.cmd"    ; move selected brush up 512 units (at grid 14)
+edit bind pgdn+shift "run .\cmds\NudgeDown512.cmd"  ; move selected brush down 512 units (at grid 14)
 
 ;      ALT-
 
