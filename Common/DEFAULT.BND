@@ -84,6 +84,8 @@ edit bind < "run .\cmds\GridDown.cmd"
 edit bind > "run .\cmds\GridUp.cmd"
 ;edit bind [ "cycle_view 0"                         ; make previous camera current
 ;edit bind ] "cycle_view 1"                         ; make next camera current
+edit bind [ "cycle_tex -1"                          ; cycle texture backward
+edit bind ] "cycle_tex 1"                           ; cycle texture forward
 ;edit bind \ "toggle_3d"                            ; toggle selected camera 2d/3d edit
 edit bind tab "cycle_brush 1"                       ; next brush in time
 edit bind del "delete_brush"                        ; delete selected brush
