@@ -297,7 +297,7 @@ edit bind l+ctrl+shift edit_links                   ; open links dialog for sele
 all  bind o+ctrl+shift "toggle_lighting"            ; Newdark Only
 ;edit bind p+ctrl+shift "run .\cmds\Optimize.cmd"    ; optimize the level to view in solid 3d
 edit bind p+ctrl+shift "qlink_create AIPatrol"      ; create AIPatrol link chain
-edit bind q+ctrl+shift qlink_reset                  ; clear quicklink group
+edit bind q+ctrl+shift "run .\cmds\QLinkCancel.cmd" ; clear quicklink group
 edit bind r+ctrl+shift rooms_build                  ; build the rooms database
 ;edit bind s+ctrl+shift synch_all                    ; synchronize the camera in 2d views
 edit bind s+ctrl+shift save_gamesys                 ; save the gamesys
