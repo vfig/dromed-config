@@ -1,5 +1,6 @@
 ;; Quick-set textures, using 'tx', 'tx2', tx3'
 ;; Use e.g. 'set tx 99' to choose textures.
+;; Note: this does *not* reset uvs!
 
 ; Reset all faces and set default texture to 'tx'
 ifdef tx reset_brush_tx

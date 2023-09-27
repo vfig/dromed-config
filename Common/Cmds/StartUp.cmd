@@ -1,8 +1,8 @@
 ; Display Solid World + selected brush in 3d Viewer
-;set_mode 6
+set_mode 6
 
 ; Display Solid + all wireframes in 3d Viewer
-set_mode 3
+;set_mode 7
 
 ; Use z-testing for wireframes (useful for mode 7)
 toggle_wire_zbuffer 1
@@ -35,3 +35,21 @@ grid_abs_scale 0.5
 ;set tx 0
 ;set tx2 -1
 ;set tx3 -1
+
+; lock terrain brushes by default (if `vfig_lock_terrain` is defined in fm.cfg)
+;ifdef vfig_lock_terrain set hens_changes 1
+;ifdef hens_changes lock all_terrain
+;ifdef hens_changes mprint ALL TERRAIN LOCKED.
+
+;; for face testing:
+;load_file test_facelook.mis
+;find_obj StartingPoint
+;cam_to_brush
+;game_mode
+
+;; for viewmodel testing:
+;load_file test_periapt.mis
+;find_obj StartingPoint
+;cam_to_brush
+;toggle_lighting
+;game_mode
