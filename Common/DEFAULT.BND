@@ -20,6 +20,7 @@
 ; unshifted
 
 edit bind a "cam_slew 1"                            ; sidestep left
+edit bind b "hots_filter"                           ; toggle Hot area brush filter
 edit bind c "cam_rotate 1"                          ; look down
 edit bind d "cam_slew 4"                            ; sidestep right
 edit bind e "cam_rotate 5"                          ; turn right
