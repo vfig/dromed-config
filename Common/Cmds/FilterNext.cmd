@@ -1,8 +1,40 @@
+; `brush_filter` command takes an int parameter which is the filter mask.
+; The "everything" filter mask is 0x0FF0 (4080); to disable certain brushes,
+; clear their bits as per the table below. It is important that the upper
+; two bits of the filter mask remain set, as dromed checks if all 16 bits are
+; set when deciding if any filters are active or not.
+;
+;   - 0x010: Terrain
+;   - 0x020: Light
+;   - 0x040: Area
+;   - 0x080: Object
+;   - 0x100: Flow
+;   - 0x200: Room
+;
+; This script uses the config variables FM* (Filter Mask) to decide which
+; filter mode it is in; it has a primary mode which is cycled through, and
+; a secondary mode which is toggled as needed.
+;
+; Primary mode:
+;
+; - FM0: show Terrain and Objects
+; - FM1: show Terrain only
+; - FM2: show Objects only
+; - FM3: show Lights only
+; - FM4: show secondary only (if any secondary is active)
+;
+; Secondary mode:
+;
+; - FMA: also show Area brushes
+; - FMR: also show Room brushes
+; - FMF: also show Flow brushes
+; - FMx: temporary flag while toggling.
+
 ; Cycle to the next filter mode (or start with mode 0 if none set yet)
-ifdef FM5 unset FM5
-ifdef FM4 set FM5 1
 ifdef FM4 unset FM4
-ifdef FM3 set FM4 1
+ifdef FM3 ifdef FMA set FM4 1
+ifdef FM3 ifdef FMF set FM4 1
+ifdef FM3 ifdef FMR set FM4 1
 ifdef FM3 unset FM3
 ifdef FM2 set FM3 1
 ifdef FM2 unset FM2
@@ -10,18 +42,6 @@ ifdef FM1 set FM2 1
 ifdef FM1 unset FM1
 ifdef FM0 set FM1 1
 ifdef FM0 unset FM0
-ifndef FM0 ifndef FM1 ifndef FM2 ifndef FM3 ifndef FM4 ifndef FM5 set FM0 1
+ifndef FM0 ifndef FM1 ifndef FM2 ifndef FM3 ifndef FM4 set FM0 1
 
-; Apply the current filter mode
-ifdef FM0 mprint Filter 0: Terrain and Object brushes (Ctrl+V to reset)
-ifdef FM0 brush_filter 3216
-ifdef FM1 mprint Filter 1: Area brushes (Ctrl+V to reset)
-ifdef FM1 brush_filter 3136
-ifdef FM2 mprint Filter 2: Terrain brushes (Ctrl+V to reset)
-ifdef FM2 brush_filter 3088
-ifdef FM3 mprint Filter 3: Object brushes (Ctrl+V to reset)
-ifdef FM3 brush_filter 3200
-ifdef FM4 mprint Filter 4: Flow brushes (Ctrl+V to reset)
-ifdef FM4 brush_filter 3328
-ifdef FM5 mprint Filter 5: Room brushes (Ctrl+V to reset)
-ifdef FM5 brush_filter 3584
+run .\cmds\FilterApply.cmd

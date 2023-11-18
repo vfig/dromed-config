@@ -124,8 +124,10 @@ edit bind pgdn "run .\cmds\CamDown512.cmd"          ; move cam down 512 units (a
 
 ;      SHIFT-
 
+edit bind a+shift "run .\cmds\FilterArea.cmd"       ; toggle Area filter
 edit bind c+shift "ceil_object"                     ; 'drop' selected object to ceiling
 edit bind d+shift "store_group"                     ; store multibrush group
+edit bind e+shift "run .\cmds\FilterFlow.cmd"       ; toggle Flow filter
 game bind e+shift "+fly -1"                         ; fly down
 edit bind f+shift "floor_object"                    ; drop selected object to floor
 edit bind h+shift hilight_brush                     ; toggle highlight of selected brush
@@ -133,6 +135,7 @@ edit bind h+shift hilight_brush                     ; toggle highlight of select
 all  bind o+shift "toggle_object_render"            ; toggle rendering of objects (Newdark only)
 edit bind q+shift qlink_del                         ; remove from quicklink group
 game bind q+shift "+fly  1"                         ; fly up
+edit bind r+shift "run .\cmds\FilterRoom.cmd"       ; toggle Room filter
 ;edit bind s+shift "set_grid"                        ; snap brush vertices to grid
 edit bind t+shift "run .\cmds\ResetTexture.cmd"       ; Set default texture.
 ;edit bind t+shift "cycle_tex -1"                    ; cycle texture backward
