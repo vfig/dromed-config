@@ -32,7 +32,8 @@ game bind i "report_bug"                            ; report a bug, duh
 ;edit bind k "set_medium 2"                          ; make brush water
 ;edit bind l "set_medium 3"                          ; make brush flood (air->water,solid->solid)
 ;edit bind m "cycle_media 1"                         ; cycle media forward
-edit bind n "set_2d_tex_filter -1"                  ; toggle texture filtering (Newdark in HW mode only)
+;edit bind n "set_2d_tex_filter -1"                  ; toggle texture filtering (Newdark in HW mode only)
+edit bind n "hilight_render"                        ; toggle hilight only
 edit bind o "solo_toggle"                           ; toggle this window to/from full screen
 game bind p "unfly"                                 ; stop flying, fall
 edit bind q "cam_rotate 2"                          ; turn left
@@ -109,6 +110,7 @@ edit bind F1 "run .\cmds\View1.cmd"
 ;edit bind F2 "cycle_mode"                           ; cycle through rendering modes for 3d view
 edit bind F2 "run .\cmds\View2.cmd"
 edit bind F3 "find_obj @@"                          ; look up object by name or number
+edit bind F4 "vm_teleport @@x,y,z"            ; camera to specified coordinates
 edit bind F5 "obj_tree"                             ; open the object hierarchy editor
 edit bind F6 "edit_obj"                             ; edit selected object
 edit bind F7 "texture_pal"                          ; open texture palette
