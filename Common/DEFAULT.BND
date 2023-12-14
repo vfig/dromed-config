@@ -170,7 +170,7 @@ edit bind F4+shift "brush_filter 3200"              ; filter object
 edit bind F5+shift "brush_filter 3328"              ; filter flow
 edit bind F6+shift "brush_filter 3584"              ; filter room
 edit bind F7+shift "brush_filter 4080"              ; filter none
-edit bind F8+shift "brush_to_cam 2"                 ; move selected brush to camera with decimals preserved
+edit bind F8+shift "brush_to_cam"                   ; move selected brush to camera
 edit bind pgup+shift "run .\cmds\NudgeUp512.cmd"    ; move selected brush up 512 units (at grid 14)
 edit bind pgdn+shift "run .\cmds\NudgeDown512.cmd"  ; move selected brush down 512 units (at grid 14)
 
