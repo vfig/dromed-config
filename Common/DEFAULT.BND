@@ -125,6 +125,7 @@ edit bind pgdn "run .\cmds\CamDown512.cmd"          ; move cam down 512 units (a
 ;      SHIFT-
 
 edit bind a+shift "run .\cmds\FilterArea.cmd"       ; toggle Area filter
+edit bind b+shift "hots_state -2"                   ; toggle selected area brush "is active"
 edit bind c+shift "ceil_object"                     ; 'drop' selected object to ceiling
 edit bind d+shift "store_group"                     ; store multibrush group
 edit bind e+shift "run .\cmds\FilterFlow.cmd"       ; toggle Flow filter
@@ -224,6 +225,7 @@ all  bind F8+alt "ai_aware_of_player"               ; toggle ai awareness
 
 game bind a+ctrl ai_aware_of_player                 ; Toggle AI awareness
 edit bind a+ctrl "next_room"                        ; goes to next room
+edit bind b+ctrl "hots_state -1"                    ; toggle selected area brush "me only"
 edit bind d+ctrl dissolve_group                     ; break cur group into individual brushes
 game bind f+ctrl ai_forget_player                   ; AI forgets they saw player
 ;edit bind g+ctrl grid_toggle                        ; toggle operation grid snap
