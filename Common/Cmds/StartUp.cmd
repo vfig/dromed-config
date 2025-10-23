@@ -53,3 +53,6 @@ grid_abs_scale 0.5
 ;cam_to_brush
 ;toggle_lighting
 ;game_mode
+
+; if the fm has an "fm_startup.cmd" file, this will run it:
+run_cmd_script fm_startup.cmd
