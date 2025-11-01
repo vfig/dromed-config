@@ -27,6 +27,7 @@ edit bind e "cam_rotate 5"                          ; turn right
 edit bind f "cam_slew 5"                            ; down
 ;edit bind h "set_medium 0"                          ; make brush solid
 edit bind h hilight_brush                           ; toggle highlight of selected brush
+game bind h "run toggle_hud"                        ; toggle hud in-game
 game bind i "report_bug"                            ; report a bug, duh
 ;edit bind j "set_medium 1"                          ; make brush air
 ;edit bind k "set_medium 2"                          ; make brush water

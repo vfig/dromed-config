@@ -1,0 +1,7 @@
+ifndef hud_hidden set inv_status_height 0
+ifdef hud_hidden set inv_status_height 0.06
+ifdef hud_hidden set hud_temp 1
+ifdef hud_hidden unset hud_hidden
+ifndef hud_hidden ifndef hud_temp set hud_hidden 1
+unset hud_temp
+objectives
