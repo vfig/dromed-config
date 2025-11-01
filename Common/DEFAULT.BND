@@ -32,6 +32,7 @@ game bind i "report_bug"                            ; report a bug, duh
 ;edit bind k "set_medium 2"                          ; make brush water
 ;edit bind l "set_medium 3"                          ; make brush flood (air->water,solid->solid)
 ;edit bind m "cycle_media 1"                         ; cycle media forward
+edit bind m "run .\cmds\ToggleSolidColorVoid.cmd"   ; toggle solid colour fill in void.
 ;edit bind n "set_2d_tex_filter -1"                  ; toggle texture filtering (Newdark in HW mode only)
 edit bind n "hilight_render"                        ; toggle hilight only
 edit bind o "solo_toggle"                           ; toggle this window to/from full screen
