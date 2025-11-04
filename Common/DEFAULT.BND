@@ -98,7 +98,9 @@ edit bind del "delete_brush"                        ; delete selected brush
 all  bind home "vm_teleport 0,0,0"                  ; return camera to default position
 all  bind print_screen "screen_dump"                ; save screenshot
 edit bind keypad_plus "brush_translate 5"           ; move brush down
+game bind keypad_plus "next_weapon"
 edit bind keypad_minus "brush_translate 2"          ; move brush up
+game bind keypad_minus "prev_weapon"
 edit bind keypad_down "brush_translate 0"           ; move brush south
 edit bind keypad_left "brush_translate 4"           ; move brush west
 edit bind keypad_right "brush_translate 1"          ; move brush east
