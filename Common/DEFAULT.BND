@@ -182,25 +182,25 @@ edit bind pgdn+shift "run .\cmds\NudgeDown512.cmd"  ; move selected brush down 5
 ;      ALT-
 
 edit bind b+alt save_group                          ; save multibrush as vbr
-edit bind a+alt "gfh_coord_edit 3"
-edit bind c+alt "gfh_coord_edit 8"
-edit bind d+alt "gfh_coord_edit 5"
-edit bind e+alt "gfh_coord_edit 2"
+;edit bind a+alt "gfh_coord_edit 3"
+;edit bind c+alt "gfh_coord_edit 8"
+;edit bind d+alt "gfh_coord_edit 5"
+;edit bind e+alt "gfh_coord_edit 2"
 game bind e+alt "run .\cmds\EditMode.cmd"           ; return to edit mode
 edit bind h+alt hilight_clear                       ; clear highlight
 edit bind l+alt "load_file"                         ; load file
 edit bind o+alt "edit_obj"                          ; open object editor
 all  bind g+alt "run .\cmds\GameMode.cmd"           ; enter game mode
 edit bind p+alt "run .\cmds\Portalize.cmd"          ; portalize the level to view solid 3d
-edit bind q+alt "gfh_coord_edit 0"
+;edit bind q+alt "gfh_coord_edit 0"
 ;edit bind r+alt "reset_brush"                       ; reset selected brush's rotation
 game bind r+alt "run .\cmds\EditModeAtPlr.cmd"      ; return to edit mode at player
-edit bind s+alt "gfh_coord_edit 4"
+;edit bind s+alt "gfh_coord_edit 4"
 edit bind t+alt "texture_pal"                       ; open texture palette
 edit bind v+alt "load_group"                        ; load multibrush *.vbr file
-edit bind w+alt "gfh_coord_edit 1"
-edit bind x+alt "gfh_coord_edit 7"
-edit bind z+alt "gfh_coord_edit 6"
+;edit bind w+alt "gfh_coord_edit 1"
+;edit bind x+alt "gfh_coord_edit 7"
+;edit bind z+alt "gfh_coord_edit 6"
 all  bind 6+alt "show_poly_edges"                   ; show poly wireframe
 all  bind 7+alt "show_all_edges"                    ; show cell wireframe
 all  bind 8+alt "show_cell"                         ; show cells in color
